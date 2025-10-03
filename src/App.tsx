@@ -13,6 +13,8 @@ function App() {
                 </p>
             </nav>
 
+            <img alt="" src="/homepage/bird.gif"/>
+
             <Routes>
                 <Route path="/a" element={<div>A</div>} />
                 <Route path="/b" element={<div>B</div>} />
