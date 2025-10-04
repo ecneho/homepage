@@ -1,0 +1,36 @@
+:root {
+    --spin-disk-size: 700px;
+}
+
+.Container {
+    position: fixed;
+    bottom: 75%;
+    right: 0;
+    transition: right 0.9s ease;
+}
+
+.SlideIn {
+    right: 0;
+}
+
+.SlideOut {
+    right: -25%;
+}
+
+.Disk {
+    position: absolute;
+    right: calc(-1 * var(--spin-disk-size) / 2);
+    width: var(--spin-disk-size);
+    height: var(--spin-disk-size);
+    animation: spin 20s linear infinite;
+    z-index: 15;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

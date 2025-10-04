@@ -1,11 +1,18 @@
-import './App.css'
+import {diskBlank, diskPZ, boxBlank, boxPZ, logo} from "@assets";
 import {Link, Route, Routes} from "react-router-dom";
+import {BlankA, BlankB} from "@pages";
+import {DiskBox} from "@components";
 
 function App() {
     return (
         <div>
-            <nav>
-                <Link to="/a">Go to A</Link> | <Link to="/b">Go to B</Link>
+            <nav style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+                <Link to="/a">
+                    <DiskBox boxImg={boxPZ} diskImg={diskPZ}/>
+                </Link>
+                <Link to="/b">
+                    <DiskBox boxImg={boxBlank} diskImg={diskBlank}/>
+                </Link>
                 <p>
                     The wiki homepage is currently under development.<br/>
                     For any additional info, reach out on Discord.<br/>
@@ -13,11 +20,18 @@ function App() {
                 </p>
             </nav>
 
-            <img alt="" src="/homepage/bird.gif"/>
+            <img alt="logo" src={logo} height="100px"/>
+
+            <div className="image-container">
+                <div className="image image-1"></div>
+                <div className="image image-2"></div>
+            </div>
+
+            <div>COMPUTER DAMNATION</div>
 
             <Routes>
-                <Route path="/a" element={<div>A</div>} />
-                <Route path="/b" element={<div>B</div>} />
+                <Route path="/a" element={<BlankA />}/>
+                <Route path="/b" element={<BlankB />}/>
             </Routes>
         </div>
     );

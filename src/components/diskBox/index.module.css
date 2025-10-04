@@ -1,0 +1,60 @@
+:root {
+    --box-disk-size: 250px;
+}
+
+.Container {
+    position: relative;
+    width: var(--box-disk-size);
+    height: var(--box-disk-size);
+    transition: transform 0.5s ease;
+}
+
+.Container:active {
+    transform: scale(1.05);
+}
+
+.Box {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.5) 3px 0 3px;
+    cursor: pointer;
+    animation: sway 10s infinite ease-in-out;
+}
+
+.Box:hover {
+    animation: shuffle 0.3s;
+}
+
+.Container:has(.Box:active) {
+    transform: scale(0.97);
+}
+
+.Disk {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--box-disk-size);
+    height: var(--box-disk-size);
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+    z-index: 1;
+}
+
+.Container:has(.Box:hover) .Disk {
+    transform: translateX(calc(var(--box-disk-size) / 2)) rotate(45deg);
+}
+
+@keyframes sway {
+    0%, 100%   { transform: rotateZ(0deg)  }
+    25%, 75%  { transform: rotateZ(1deg);  }
+    50%  { transform: rotateZ(-1deg); }
+}
+
+@keyframes shuffle {
+    0%, 100%   { rotate: 0deg  }
+    25%, 75%  { rotate: 1deg;  }
+    50%  { rotate: -1deg; }
+}
