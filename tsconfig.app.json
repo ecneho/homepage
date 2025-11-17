@@ -22,15 +22,7 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-
-    "paths": {
-      "@components": ["src/components/index.tsx"],
-      "@assets": ["src/assets/index.tsx"],
-      "@store": ["src/store/index.tsx"],
-      "@pages": ["src/pages/index.tsx"],
-      "@hooks": ["src/hooks/index.tsx"]
-    }
+    "noUncheckedSideEffectImports": true
   },
   "include": ["src"]
 }
