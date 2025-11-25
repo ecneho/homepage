@@ -25,6 +25,7 @@
     --color-red-50: color-mix(in srgb, var(--color-red), transparent 50%);
     --color-orange-50: color-mix(in srgb, var(--color-orange), transparent 50%);
     --color-gray-50: color-mix(in srgb, var(--color-gray), transparent 50%);
+    --color-black-40: color-mix(in srgb, var(--color-black), transparent 40%);
     --color-black-50: color-mix(in srgb, var(--color-black), transparent 50%);
 }
 
@@ -34,5 +35,4 @@ body {
     box-sizing: border-box;
     background-color: #202020;
     font-family: "Corbel", sans-serif;
-    image-rendering: pixelated;
 }

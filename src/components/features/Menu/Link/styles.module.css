@@ -1,0 +1,33 @@
+.MenuLinkContainer {
+    align-items: center;
+    display: flex;
+    padding: 10px 5px;
+    height: 50px;
+    gap: 15px;
+    text-decoration: none;
+    background-color: var(--color-black-40);
+    border-block: 1px solid var(--color-gray-50);
+}
+
+.MenuLinkContainer:hover {
+    background-color: var(--color-black-40);
+}
+
+.Active {
+    border-block: 1px solid var(--color-orange);
+    background-color: var(--color-orange-50) !important;
+}
+
+.Image {
+    height: 60px;
+    width: 60px;
+}
+
+.Image img {
+    height: 100%;
+    width: 100%;
+}
+
+.Title {
+    color: var(--color-white);
+}

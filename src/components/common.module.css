@@ -1,7 +1,7 @@
-.TextGreen {
+.Good {
     color: var(--color-green);
 }
 
-.TextRed {
+.Bad {
     color: var(--color-red);
 }

@@ -1,0 +1,12 @@
+.Submenu {
+    font-size: 13px;
+    background-color: var(--color-black-40);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.Submenu:hover {
+    background-color: var(--color-black-50);
+}

@@ -1,0 +1,44 @@
+.Container {
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+    display: flex;
+    grid-column: span 2;
+    text-decoration: none;
+    padding: 2px 2px;
+    border-block: 1px solid var(--color-gray-50);
+}
+
+.Grid {
+    display: grid;
+    grid-row: span 2;
+    grid-column: span 2;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+.Menu {
+    grid-row: span 2;
+    border: 1px solid var(--color-gray);
+}
+
+.Active {
+    border-block: 1px solid var(--color-orange);
+    background-color: var(--color-orange-50);
+}
+
+.Image {
+    width: 18px;
+    height: 18px;
+}
+
+.Good {
+    color: var(--color-green);
+}
+
+.Bad {
+    color: var(--color-red);
+}
